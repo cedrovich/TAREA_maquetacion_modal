@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+}
+
+body {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*Header*/
+
+header {
+    background-color: #f5f0de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.logo {
+    width: 300px;
+}
+
+.logo img {
+    width: 100%;
+    display: inline-block;
+}
+
+.sec1 {
+    display: flex;
+}
+
+.text-cont {
+    padding: 50px;
+    width: 50%;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-cont p {
+    margin: 10px 0;
+}
+
+.text-cont h3 {
+    font-family: 'Playfair Display';
+    color: #c5bfa9;
+    font-style: italic;
+}
+
+.text-cont h1 {
+    font-family: 'Playfair Display';
+    font-size: 24px;
+}
+
+span {
+    font-weight: 500;
+    margin: 25px 0;
+}
+
+.btn {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px #c5bfa9 solid;
+    padding: 10px 30px;
+    font-size: 14px;
+    border-radius: 50px;
+    width: 170px;
+    text-align: center;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #f46562;
+    border: 2px #f46562 solid;
+    box-shadow: 0px 0px 15px #cccc;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 30px;
+}
+
+.articles-cont {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f7f7f7;
+}
+
+footer {
+    background-color: #f46562;
+    height: 70px;
+    text-align: center;
+}
+
+.person {
+    text-align: center;
+}
+
+.person figure {
+    width: 170px;
+}
+
+.person figure img {
+    width: 100%;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.person h2 {
+    font-family: 'Playfair Display';
+    color: #f46562;
+    margin: 5px;
+}
+
+.scm {
+    padding: 10px;
+}
+
+.person a {
+    text-decoration: none;
+    color: #333;
+    margin: 5px;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#modal h1 {
+    font-family: 'Playfair Display';
+    font-size: 32px;
+    margin: 30px 0;
+}
+
+#modal #close {
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    cursor: pointer;
+    background-color: #333;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close i {
+    color: white;
+}
+
+#modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#modal input[type="text"],
+#modal input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+#modal input[type="submit"] {
+    width: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px #c5bfa9 solid;
+    color: black;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+input[type="submit"]:hover {
+    color: white;
+    background-color: #f46562;
+    border: 2px #f46562 solid;
+    box-shadow: 0px 0px 15px #cccc;
+}
+
+textarea {
+    width: 100%; /* Ajustar el ancho de los inputs */
+    padding: 10px;
+    margin-top: 5px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    resize: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sec1 {
+        flex-direction: column;
+    }
+
+    .text-cont {
+        padding: 50px;
+        width: 100%;
+        display: flex;
+        align-items: self-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .articles-cont {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #f7f7f7;
+        flex-direction: column;
+        padding: 50px 0;
+    }
+
+    .btns {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .btn {
+        margin: 5px;
+    }
+}

@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/b971a45ca4.js" crossorigin="anonymous"></script>
+    <title>Tarea Modal</title>
+</head>
+<body>
+    <header>
+        <figure class="logo">
+            <img src="images/logo.jpg" alt="">
+        </figure>
+    </header>
+    <section class="sec1">
+        <article class="text-cont">
+            <h3>Our Team</h3>
+            <h1>A Dedicated Team of Experts</h1>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni similique harum ab nulla molestias. Asperiores maiores consectetur ex, perspiciatis labore qui repellat? Commodi qui non deserunt fugiat provident facilis similique.</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, itaque natus ipsam porro, minima dolorem laborum suscipit excepturi doloribus animi rem qui fuga similique sit eos debitis harum distinctio commodi?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nemo, esse earum voluptatibus quaerat quos enim aliquam provident quam? Deserunt consequatur perferendis, quisquam ea recusandae dignissimos deleniti. Totam, aperiam nesciunt.</p>
+            <div class="btns">
+                <a class="btn" href="#">LEARN MORE</a>
+                <a class="btn" href="#">VIEW ALL TEAM</a>
+            </div>
+        </article>
+        <div class="articles-cont">
+            <article class="person">
+                <figure>
+                    <img src="images/foto1.jpg" alt="">
+                </figure>
+                <h2>Jessica Cooper</h2>
+                <p>Titulo</p>
+                <div class="scm">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+                <a class="btn open" href="">GET IN TOUCH</a>
+            </article>
+            <article class="person">
+                <figure>
+                    <img src="images/foto2.jpg" alt="">
+                </figure>
+                <h2>Robert Wagner</h2>
+                <p>Titulo</p>
+                <div class="scm">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+                <a class="btn open" href="">GET IN TOUCH</a>
+            </article>
+        </div>
+    </section>
+    <div id="modal-background"></div>
+    <section id="modal">
+        <div id="close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <h1>Contact Us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, maxime labore? Tempore, optio, adipisci,</p>
+        <form action="" method="post">
+            <div>
+                <input type="text" name="name" placeholder="Name*" required>
+                <input type="email" name="email" placeholder="E-mail*" required>
+                <textarea name="message" placeholder="Message*" required></textarea>
+            </div>
+            <input type="submit" value="SUBMIT">
+        </form>
+    </section>
+    <footer>
+        <!-- <p>Edrick León</p> -->
+    </footer>
+    <script>
+        $(document).ready(function() {
+
+            $(".open").click(function(event) {
+                event.preventDefault();
+                $("#modal").fadeIn();
+                $("#modal-background").fadeIn();
+            });
+
+            $("#close").click(function() {
+                $("#modal").fadeOut();
+                $("#modal-background").fadeOut();
+            });
+
+            // $("#modal-background").click(function() {
+            //     $("#modal").fadeOut();
+            //     $("#modal-background").fadeOut();
+            // });
+        });
+    </script>
+</body>
+</html>
