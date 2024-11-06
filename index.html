@@ -37,7 +37,7 @@
                     <a href=""><i class="fa-brands fa-twitter"></i></a>
                     <a href=""><i class="fa-brands fa-pinterest"></i></a>
                 </div>
-                <a class="btn open" href="">GET IN TOUCH</a>
+                <a class="btn open" href="#">GET IN TOUCH</a>
             </article>
             <article class="person">
                 <figure>
@@ -50,7 +50,7 @@
                     <a href=""><i class="fa-brands fa-twitter"></i></a>
                     <a href=""><i class="fa-brands fa-pinterest"></i></a>
                 </div>
-                <a class="btn open" href="">GET IN TOUCH</a>
+                <a class="btn open" href="#">GET IN TOUCH</a>
             </article>
         </div>
     </section>
@@ -75,6 +75,8 @@
     </footer>
     <script>
         $(document).ready(function() {
+            $("#modal").hide();
+            $("#modal-background").hide();
 
             $(".open").click(function(event) {
                 event.preventDefault();
@@ -87,10 +89,10 @@
                 $("#modal-background").fadeOut();
             });
 
-            // $("#modal-background").click(function() {
-            //     $("#modal").fadeOut();
-            //     $("#modal-background").fadeOut();
-            // });
+            $("#modal-background").click(function() {
+                $("#modal").fadeOut();
+                $("#modal-background").fadeOut();
+            });
         });
     </script>
 </body>

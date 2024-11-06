@@ -220,7 +220,7 @@ input[type="submit"]:hover {
 }
 
 textarea {
-    width: 100%; /* Ajustar el ancho de los inputs */
+    width: 100%;
     padding: 10px;
     margin-top: 5px;
     height: 100px;
